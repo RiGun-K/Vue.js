@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-if="age>=20">성인</p>
+        <p v-else-if="age<20 && age > 12">10대 청소년</p>
+        <p v-else>그외 어린이</p>
+
+        <!-- js에서의 변수 age 값을 가져와서 비교한다 , 참 일 경우의 p 태그만 웹에 띄운다. -->
+        <!-- 서버에서 넘어온 원본에는 p 태그 3개를 줫지만 실제로는 2개를 삭제한다 (메모리 상에서)
+            조건문 비교시 하나만 참 이기때문에 나머지 거짓인 2개는 삭제 -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="./Dom.js"></script>
+
+</body>
+</html>

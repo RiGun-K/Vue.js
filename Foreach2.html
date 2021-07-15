@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1 id="title">{{ message }}</h1>
-    <!-- 변수 출력시 {{  }} 사용 -->
-
+    <div id="app">
+        <div v-for="(value, name) in user">
+            <p>{{ name }} - {{ value }}</p>
+        </div>
+        <!-- for-each 구조로 Object 값 들을 출력해보자.-->
+    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="./Hello.js"></script>
+    <script src="./Foreach2.js"></script>
 </body>
 </html>

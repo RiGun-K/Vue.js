@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="addCounter">+</button>
+        <button v-on:click="subCounter">-</button>
+        <p>{{ counter }}</p>
+    </div>
+
+    <!-- method 를 이용하여 동일하게 Click.js처럼 처리-->
+
+    <!-- v-bind:href => :href , :src -->
+    <!-- v-on:click => @click  가능 -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="./Method.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+</head>
+<body>
+    <div id="title">
+        <h1>{{ message }}, {{ name }}</h1>
+        <!-- Hello World, everyone 출력 -->
+    </div>
+    <h1>{{ message }}</h1>
+    <!-- el에서 선언해준 title 값이 없으므로 변수로 호출안되고 그대로 '{{ message }}' 로 호출됨. -->
+    <!-- id값은 html에서 한번만 사용가능 -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="./ObjectTypeData.js"></script>
+    <!-- 해당하는 js파일 , js파일의 용량이 많을경우 head에 작성시 에러가 날수 있으므로 마지막에 선언해준다.-->
+</body>
+</html>
