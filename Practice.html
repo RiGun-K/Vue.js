@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2>게시글을 작성해봅시다.</h2>
+        <input type="text" v-model="name" placeholder="작성자">
+        <input type="text" v-model="comment" placeholder="내용">
+        <!-- input 과 data를 연결하려면 v-model 사용-->
+        <button @click="save">저장</button><br>
+        <!-- 버튼 클릭시 save 메소드 실행 -->
+
+        <ul>
+            <li v-for="msg in messages">
+                <p>{{ msg.name }} 님이 작성한 내용은 {{ msg.comment }} 입니다.</p>
+            </li>
+        </ul>
+        
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="./Practice.js"></script>
+</body>
+</html>
