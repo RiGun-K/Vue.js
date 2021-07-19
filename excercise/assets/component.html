@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./images/styles.css">
+    <title>Excercise</title>
+</head>
+<body>
+    <div class="nav-bar"></div>
+    <div id="app">
+        <div class="cart">
+            <p>Cart({{ cart }})</p>
+        </div>
+        <!-- 모든 코드를 product로 component 하였음 -->
+        <!-- product 하나만 넣으면 끝 -->
+        <product @add-to-cart="addToCart"></product>
+    </div>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="/excercise/component.js"></script>
+</body>
+</html>

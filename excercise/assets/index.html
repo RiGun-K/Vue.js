@@ -18,12 +18,40 @@
         
             <!-- 정보 영역 -->
             <div class="product-info">
-                <h1>{{ product }}</h1>
+                <h1>{{ title }}</h1>
                 <p v-if="inStock">In Stock</p>
                 <p v-else>Out of Stock</p>
                 <ul>
                     <li v-for="detail in details">{{ detail }}</li>
                 </ul>
+                <!-- key값을 줘야하기 때문에 Id를 준다. -->
+                <!-- v-for="(detail, i) in details" : key="i"></li> 로 인덱스 값(detail, i)으로 키를 줄 수 있다.-->
+                <!-- "variant in variants" = variants 배열에서 각각의 배열에 접근 = Image 메소드 실행시 각각의 배열의 해당하는 이미지가 발생하도록 -->
+                
+                <!-- 위 반복문들을 하나의 div로 정리 -->
+                <div v-for="(variant, index) in variants"
+                        :key="variant.variantKey"
+                        class="color-box"
+                        :style="{backgroundColor: variant.variantColor}"
+                        @mouseover="updateProduct(index)">
+                </div>
+                        
+                <!-- 버튼 이벤트 생성 -->
+                <!-- 버튼 메소드 가져오기 -->
+                <div class="cart">
+                    <p>Cart{{ cart }}</p>
+                </div>
+                <!-- 만일 false 일 경우 클릭안되도록 설정 -->
+                <button v-on:click="addToCart"
+                    :disabled="!inStock"
+                    :class="{disabledButton:!inStock}"
+                >Add to Cart</button>
+                
+
+                <!-- <div v-for="variant in variants" :key="variant.variantId">
+                    <p @mouseover="updateProduct(variant.variantImage)">{{ variant.variantColor }}</p>
+                </div> -->
+                
             </div>
         </div>
     </div>
