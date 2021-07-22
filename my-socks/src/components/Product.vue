@@ -25,14 +25,19 @@
             Add to cart
             </button>
         </div>
+
+        
     </div>
+
+
 </template>
 
 <script>
 export default{
     data() {
         return {
-            product: 'Sock',
+            
+            product: 'League Of Legend Sock',
             brand: 'Vue Mastery',
             selectedVariant: 0,
             details: ['80% cotton', '20% polyester', 'Gender-neutral'],
@@ -58,7 +63,9 @@ export default{
         },
         updateProduct: function(index) {
             this.selectedVariant = index
-        }
+        },
+       
+
     },
     computed: {
         title() {

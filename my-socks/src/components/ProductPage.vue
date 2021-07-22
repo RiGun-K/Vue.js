@@ -3,7 +3,7 @@
     <div id="app">
         <div class="nav-bar"></div>
         <div class="cart">
-            <p>Cart({{ cart.length }})</p>
+            <p>담기({{ cart.length }})</p>
         </div>
         <Product @add-to-cart="addToCart"></Product>
     </div>
@@ -20,11 +20,14 @@ export default{
     },
     data() {
         return {cart:[]}
+        
     },
     methods:{
         addToCart(variantId){
             this.cart.push(variantId)
-        }
+        },
+       
+
     }
 }
 </script>
