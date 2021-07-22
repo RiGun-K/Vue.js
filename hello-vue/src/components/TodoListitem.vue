@@ -2,7 +2,7 @@
 <template>
     <li>
         {{ todo.text }}
-        <button @click="$emit('remove', todo.id)">X</button>
+        <button @click="$emit('remove', todo.id)">삭제</button>
         <!-- 버튼 클릭시 remove 이벤트 발생 -->
     </li>
 </template>

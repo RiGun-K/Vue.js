@@ -5,8 +5,11 @@
   </div>
 </template>
 
+<!-- 일반적으로 App.vue 에서 셋팅을 한다 . 액티비티메인이라고 생각하면 됨 -->
+
 <script>
 import TodoList from './components/TodoList.vue'
+
 
 export default {
   name: 'App',
@@ -24,7 +27,7 @@ export default {
 #app {
   max-width: 400px;
   margin:0 auto;
-  line-height: 1.4;
+  line-height: 2.0;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
