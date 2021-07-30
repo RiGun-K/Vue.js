@@ -1,7 +1,6 @@
 let app = new Vue({
     el:'#app',
     data: {
-        age:20
+        address:'https://www.daum.com'
     }
 });
-
