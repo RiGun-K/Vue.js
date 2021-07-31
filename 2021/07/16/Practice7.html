@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="checkbox" id="checkbox_single" v-model="value">
+        <label for="checkbox_single">{{ value }}</label>
+    
+        <div>
+            <input type="checkbox" id="checkbox_one" value="one" v-model="values">
+            <label for ="checkbox_one">one</label>
+            <input type="checkbox" id="checkbox_two" value="two" v-model="values">
+            <label for ="checkbox_two">two</label>
+            <input type="checkbox" id="checkbox_three" value="three" v-model="values">
+            <label for ="checkbox_three">three</label>
+            <p>Checked: {{ values }}</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="./Practice7.js"></script>
+
+    
+</body>
+</html>
