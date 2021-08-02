@@ -21,11 +21,16 @@ export default new Vuex.Store({
         getReviews({commit}){
             axios.get('/api/comments')
             .then(response=>{
-                commit('updateReivews',response.date)
+                commit('updateReivews',response.data)
             })
             .catch(err=>{
                 console.log(err)
             })
+        }
+    },
+    getters:{
+        reviewCount(state /* , getters */) {
+            return state.reviews.length
         }
     }
 });
