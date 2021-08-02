@@ -3,7 +3,7 @@
         <h1>Reviews</h1>
         <ul>
             <li v-for="c in comments" :key="c.id">
-                <p>{{ c.body }}</p>
+                <p>{{c.body}}</p>
             </li>
         </ul>
     </div>
@@ -12,21 +12,20 @@
 <script>
 import axios from 'axios'
 
-export default{
+export default {
     name:'Reviews',
-    data() {
-        return { comments:[] }
+    data(){
+        return {comments:[]}
     },
-    mounted() {
+    mounted(){
         axios.get('/api/comments')
         .then(response=>{
             console.log(response)
-            this.comments=Response.data
+            this.comments=response.data
         })
         .catch(err=>{
             console.log(err)
         })
     }
-
 };
 </script>
