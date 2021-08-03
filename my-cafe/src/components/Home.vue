@@ -23,6 +23,7 @@ export default{
         // namespaced 가 설정되지 않은 경우
         ...mapState({
             userId:state=>state.user.userId
+            // state 안에 변수가 많을 경우 용이함
         }),
         // namespaced 가 설정 된 경우 모듈명을 적는다.
         ...mapState('reviews', {
