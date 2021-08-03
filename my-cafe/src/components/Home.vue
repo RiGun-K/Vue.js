@@ -1,14 +1,67 @@
 <template>
     <div id="app">
         <h1>Welcome {{ userId }}</h1>
-        <input v-model="newId" type="text"><button @click="saveUserId">Save</button><br>
-        <button @click="updateReviews">Update</button>
+        <!-- <input v-model="newId" type="text"><button @click="saveUserId">Save</button><br> -->
+            <v-text-field>
+                <v-icon
+                    slot="append"
+                    color="red"
+                >
+                mdi-plus
+                </v-icon>
+                <v-icon
+                    slot="prepend"
+                    color="green"
+                >
+                mdi-minus
+                </v-icon>
+            </v-text-field>
+
+        <!-- <button @click="updateReviews">Update</button> -->
+        <div class="text-center">
+            <v-btn
+                rounded
+                color="primary"
+                dark
+            >
+                Button
+            </v-btn>
+        </div>
+
         <h1>{{ reviewCount }}</h1>
-        <ul>
+        <!-- <ul>
             <li v-for="r in reviews" :key="r.id">
                 <p>{{ r.body }}</p>
             </li>
-        </ul>
+        </ul> -->
+
+        <!-- div id="app" 이후로 v를 사용하기 위해 사이트에서 링크를 복사해서 붙여 넣기만 한다 --> 
+
+        <v-app id="inspire">
+    <v-simple-table>
+      <template v-slot:default>
+        <thead>
+          <tr>
+            <th class="text-left">
+              Email
+            </th>
+            <th class="text-left">
+              Comment
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            v-for="item in reviews"
+            :key="item.name"
+          >
+            <td>{{ item.name }}</td>
+            <td>{{ item.calories }}</td>
+          </tr>
+        </tbody>
+      </template>
+    </v-simple-table>
+  </v-app>
     </div>
 </template>
 
