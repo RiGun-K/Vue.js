@@ -49,6 +49,9 @@
 export default {
   name: 'App',
 
+
+  // 원래는 component로 실행하지만 Vuetify 사용할 경우 Router로 동작하기 때문에 주석 처리했음..
+  
   // components: {
   //   HelloWorld,
   // },
