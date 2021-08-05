@@ -8,6 +8,7 @@
 
 <script>
   // import 또한 삭제 
+import memoApi from '../apis/memos'
 
   export default {
     name: 'Home',
