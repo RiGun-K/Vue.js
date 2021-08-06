@@ -5,10 +5,8 @@
             
             <input type="text" v-model="userid" placeholder="아이디" />
     
-        <p v-if="requiresAuth">
-            <router-link :to="{ path: '/signup' }">Signup</router-link>
             <input type="password" v-model="password" placeholder="비밀번호" />
-        </p> 
+       
      
         <v-btn color="primary">
           <input type="submit" value="로그인"  />
