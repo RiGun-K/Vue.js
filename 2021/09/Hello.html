@@ -11,6 +11,17 @@
     <!-- 변수 출력시 {{  }} 사용 -->
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="./Hello.js"></script>
+    
+    <script> 
+        let app = new Vue({
+            // #을 사용하면 아이디
+            el:'#title',
+            // 변수이름:값
+            data: {
+                message:'2학기 Vue.js 강의시작'
+            }
+        });
+    // 위와 같이 html 코드에서 script안에 Vue를 넣어서도 사용가능    
+    </script>
 </body>
 </html>
