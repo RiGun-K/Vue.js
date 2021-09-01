@@ -10,3 +10,5 @@ const server = http.createServer((req, res)=> {
 
 server.listen(3000)
 // listen = 서버를 켜라 
+// 노드는 3000번 포트를 가진다.
+
