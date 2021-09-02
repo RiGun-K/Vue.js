@@ -11,7 +11,7 @@ let app = new Vue({
         subCounter(){
             this.counter -= 1
         }
-        // methods를 사용시 반드시 this. 을 사용해야 한다.
+        // methods를 사용시 반드시 this. 를 사용해야 한다.
         // 버튼 클릭시 -1 씩 감소하도록 설정하였다.
     }
 });
