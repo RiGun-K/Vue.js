@@ -4,6 +4,11 @@ let app = new Vue({
         counter:0
     },
     method: {
-
+        countUp() {
+            this.counter += 1
+        },
+        countDown() {
+            this.counter -= 1
+        }
     }
 });
