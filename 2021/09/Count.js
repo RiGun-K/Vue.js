@@ -9,6 +9,7 @@ let app = new Vue({
         },
         countDown() {
             this.counter -= 1
+            
         }
     }
 });
