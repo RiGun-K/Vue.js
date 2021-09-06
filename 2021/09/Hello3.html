@@ -8,15 +8,20 @@
 </head>
 <body>
     <div id="app">
-        <button v-on:click="countUp">+</button>
-        <button v-on:click="countDown">+</button>
-        <p>{{ counter }}</p>
+        <!-- {{  }} 안에는 변수임. -->
+        <p>{{ test }}</p>
     </div>
 
-    <!-- 숫자 0 부터 시작됨, (+) 버튼이 생성되며 클릭시 숫자가 올라감. -->
-
+    <!-- Vue.js 실행하기 위한 script 코드 -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="./Click.js"></script>
 </body>
 </html>
 
+<script>
+    let app = new Vue({
+        el:"#app",
+        data: {
+            test:'성공입니다.'
+        }
+    })
+</script>
