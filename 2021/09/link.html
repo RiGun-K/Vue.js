@@ -8,21 +8,20 @@
 </head>
 <body>
     <div id="app">
-        <img src="dd.jpg">기본코드</img>
-        <img v-bind:src="images">v-bind 코드</img>
+        <a href="http://www.naver.com">기본</a>
+        <a v-bind:href="naver">Vue</a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    
+
     <script>
         new Vue({
-           el:'#app',
-           data:{
-               images:'dd.jpg'
-           }
-       })
+            el:'#app',
+            data: {
+                naver:'http://www.naver.com'
+            }
+        })
     </script>
-    
-    
+
 </body>
 </html>
