@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h3>관심 받고 있는 언어 랭킹</h3>
+        <table>
+            <thead>
+            <!-- 테이블 헤어 반복-->
+                <th v-for="item in header">{{ item }}</th>
+                <tbody>
+                <!-- i행 반복-->
+                    <tr v-for="line in ranking"></tr>
+                    <!-- i데이터 반복-->
+                        <td v-for="item in line">{{ item }}</td>
+                </tbody>
+            </thead>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+        new vue({
+            el:'#app',
+            data: { 
+                    header: ["프로그래밍언어",2018,2013,2008,2003,1998],
+                    ranking: [
+                        ['Java', 1,2,1,1,16],
+                        ['C', 2,1,2,2,1],
+                        ['C++', 3,4,3,3,2],
+                        ['Python', 4,7,6,11,23],
+                        ['JavaScript', 7,10,8,7,20]
+                    ]
+                }
+        })
+    </script>
+
+</body>
+</html>
