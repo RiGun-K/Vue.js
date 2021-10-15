@@ -12,21 +12,22 @@
         <table>
             <thead>
             <!-- 테이블 헤어 반복-->
-                <th v-for="item in header">{{ item }}</th>
-                <tbody>
-                <!-- i행 반복-->
-                    <tr v-for="line in ranking"></tr>
-                    <!-- i데이터 반복-->
-                        <td v-for="item in line">{{ item }}</td>
-                </tbody>
+            <th v-for="item in header">{{ item }}</th>
             </thead>
+            <tbody>
+                <!-- 1행 반복-->
+                <tr v-for="line in ranking">
+                    <!-- 1데이터 반복-->
+                    <td v-for="item in line">{{ item }}</td>
+                </tr>
+            </tbody>
         </table>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
     <script>
-        new vue({
+        new Vue({
             el:'#app',
             data: { 
                     header: ["프로그래밍언어",2018,2013,2008,2003,1998],
