@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 사용자의 행위를 처리 하는 v-model 예제 -->
+    <div id="app">
+        <input v-model="myPhone" placeholder="전화번호를 입력하세요(-제외)">
+        <p>당신의 전화번호는 {{ myPhone }} 입니다.</p>
+   
+        <label><input type="checkbox" v-model="myCheck">체크박스의 상태는 {{ myCheck }}</label><br>
+        
+        <!-- <lable><input type="checkbox" value="값" v-model="동일한 프로퍼티명">?</lable> -->
+        <lable><input type="checkbox" value="red" v-model="myCheckList">적</lable><br>
+        <lable><input type="checkbox" value="green" v-model="myCheckList">녹</lable><br>
+        <lable><input type="checkbox" value="blue" v-model="myCheckList">청</lable><br>
+        선택한 색은 {{ myCheckList }}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                myPhone:'010',
+                myCheck: true,
+                myCheckList:[]
+            }
+        })
+    </script>
+</body>
+</html>
