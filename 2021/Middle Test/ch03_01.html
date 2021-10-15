@@ -7,6 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- 요소의 속성을 데이터로 지정하는 v-bind -->
+    <div id="app">
+        <img src="kakao.jpg">직접지정</img>
+        <img v-bind:src="kakao">v-bind지정</img>
+        <img :src="kakao">v-bind 단축키지정</img>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                kakao:'kakao.jpg'
+            }
+        })
+    </script>
 </body>
 </html>
