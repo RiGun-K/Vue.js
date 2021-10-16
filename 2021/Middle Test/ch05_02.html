@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 클릭하면 더이상 누를 수 없으며 Toast 메세지 출력 -->
+    <div id="app">
+        <button value="ok" v-bind:disabled="isClick" v-on:click="oneClick">눌러보소</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+        function good() {
+            alert("진짜 눌렀구먼");
+        }
+        new Vue({
+            el:'#app',
+            data: {
+                isClick: false
+            },
+            methods: {
+                oneClick: function() {
+                    this.isClick = true;
+                    good();
+                }
+            }
+        })
+    </script>
+</body>
+</html>

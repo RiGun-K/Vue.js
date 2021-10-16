@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <select v-model="myAge" multiple style="width:150px"> = 복수선택 -->
+        <select v-model="myAge">
+            <option disabled value="">연령대을 선택해 주세요</option>
+            <option>10~19세</option>
+            <option>20~29세</option>
+            <option>30~39세</option>
+            <option>40~49세</option>
+            <option>50세이상</option>
+        </select>
+        <p v-bind:style="{age: myAge}">선택한 연령대는 {{ myAge }} 입니다.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                myAge:''
+            }
+        })
+    </script>
+</body>
+</html>

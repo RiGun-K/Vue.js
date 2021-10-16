@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input v-model.lazy="myText">
+        <p>입력후 표시 『{{ myText }}』</p>
+    
+        <!-- 입력 후 자동으로 변경되는 예제 -->
+        <input v-model.number="myNumber" type="number" placeholder="근무한 시간을 입력하세요">
+        <p>당신의 급여는 『{{ 8350 * myNumber }} 원 입니다.』</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                myText:'',
+                myNumber:''
+            }
+        })
+    </script>
+</body>
+</html>

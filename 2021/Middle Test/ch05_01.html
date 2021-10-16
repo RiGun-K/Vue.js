@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- v-on:click="" 이벤트 처리 예제, 메소드 추가필수 -->
+    <div id="app">
+        <p>{{ count }}</p>
+        <button v-on:click="countUp">누르지 마시오.</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                count:0
+            },
+            // count 가 증가하려면 메소드 추가
+            methods: {
+                countUp: function() {
+                    this.count++;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
