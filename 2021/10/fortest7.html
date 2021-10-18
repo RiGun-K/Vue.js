@@ -9,11 +9,9 @@
 <body>
     <div id="app">
         <ul>
-            <li v-for="item in myArray">{{ item }}</li>
+            <li v-for="item in myArray" v-if="item % 2 == 0">{{ item }}</li>
         </ul>
-        <button v-on:click="sortData(myArray)">소트</button><br>
-    </div>    
-
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
@@ -21,17 +19,9 @@
         new Vue({
             el:'#app',
             data: {
-                myArray: ['one', 'two', 'three', 'four', 'five']
-            },
-            methods: {
-                sortData: function(listdata) {
-                    listdata.sort(function(a,b) {
-                        return (a < b ? -1 : 1);
-                    });
-                }
+                myArray: [1,2,3,4,5]
             }
         })
     </script>
-
 </body>
 </html>
