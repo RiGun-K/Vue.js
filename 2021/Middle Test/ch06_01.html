@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- v-if 를 통해 조건이 true,false 일 경우 -->
+    <div id="app">
+        <label>
+            <input type="checkbox" v-model="myVisible">표시
+        </label>
+        <!-- true일 경우 '체크박스가 OK' 표시 ㄴ-->
+        <p v-if="myVisible">체크박스가 OK</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                // 기본값 false
+                myVisible: false
+            }
+        })
+    </script>
+</body>
+</html>
