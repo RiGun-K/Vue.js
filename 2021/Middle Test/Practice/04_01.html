@@ -8,23 +8,18 @@
 </head>
 <body>
     <div id="app">
-      <p>{{ ar }}</p>
-      <p>{{ ar.name }}</p>
-      <!-- <p v-bind:src=""></p>
-      <p v-bind:href=""></p> -->
-      <p v-bind:align="al">우측정렬</p>
-      <p v-bind:style="{ color: a }"></p>
+        <input v-model="MyName" placeholder="이름">
+        <p>{{ MyName }}</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
     <script>
         new Vue({
-           el:'#app',
-           data: {
-               ar:{name:'아아', price:500},
-               al:'right'
-           }
+            el:'#app',
+            data: {
+                MyName:''
+            }
         })
     </script>
 </body>
