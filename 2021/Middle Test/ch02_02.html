@@ -11,6 +11,7 @@
         <p>{{ "나의 연봉은 " + myPrice * 12 + " 원 입니다"}}</p>
         <p>{{ "안녕하세요 " + myName + " 님" }}</p>
         <p>{{ "나의 성은 " + myName.substr(0,1) }}</p>
+        <p v-text="myPrice">나의 연봉</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
