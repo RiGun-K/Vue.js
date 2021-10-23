@@ -10,6 +10,13 @@
     <div id="app">
         <input v-model="MyName" placeholder="이름">
         <p>{{ MyName }}</p>
+
+        <textarea v-model="MyText"></textarea>
+        <p>{{ MyText }}</p>
+
+        <label><input type="checkbox" v-model="MyCheck">동의합니다</label>        
+        <p>{{ MyCheck }}</p>
+        <button v-bind:disabled="MyCheck==false">송신</button>      
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -18,7 +25,9 @@
         new Vue({
             el:'#app',
             data: {
-                MyName:''
+                MyName:'',
+                MyText:'',
+                MyCheck:false
             }
         })
     </script>
