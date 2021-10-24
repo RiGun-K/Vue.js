@@ -8,24 +8,26 @@
 </head>
 <body>
     <div id="app">
-        <!-- <a v-bind:href='address'>Daum</a> -->
-  
-
-        <span>클릭시 해당 페이지 로 이동합니다</span>
+        <select v-model="myColor">
+            <option disabled value="">선택하시오.</option>
+            <option>빨강</option>
+        </select>
+        <p v-bind:style="{color:myColor}">{{ myColor }}</p>
     
+        <input v-model.lazy="">
+        <input v-model.number="">
+        <input v-model.trim="">
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-   
+
     <script>
         new Vue({
             el:'#app',
             data: {
-                address: 'www.naver.com'
+                myColor:''
             }
         })
     </script>
-
-    
 </body>
 </html>

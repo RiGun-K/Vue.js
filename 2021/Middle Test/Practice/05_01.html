@@ -8,24 +8,29 @@
 </head>
 <body>
     <div id="app">
-        <!-- <a v-bind:href='address'>Daum</a> -->
-  
-
-        <span>클릭시 해당 페이지 로 이동합니다</span>
-    
+        <p>{{ count }}</p>
+        <button v-on:click="clickUp">누르지마시오.</button>
     </div>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-   
+
     <script>
+        function good() {
+            alert("고만");
+        }
         new Vue({
             el:'#app',
             data: {
-                address: 'www.naver.com'
+                count:0
+            },
+            methods: {
+                clickUp: function() {
+                    this.count++;  
+                    good();        
+                }
+                
             }
         })
     </script>
-
-    
 </body>
 </html>

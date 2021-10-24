@@ -8,24 +8,25 @@
 </head>
 <body>
     <div id="app">
-        <!-- <a v-bind:href='address'>Daum</a> -->
-  
-
-        <span>클릭시 해당 페이지 로 이동합니다</span>
-    
+        <!-- true 일 경우만 표시 -->
+        <input type="checkbox" v-model="ck">
+        <p v-if="ck">진짜다</p>
+        <p v-else>가짜다</p>
+        
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-   
+
     <script>
         new Vue({
             el:'#app',
             data: {
-                address: 'www.naver.com'
+                ck:false
+            },
+            methods: {
+
             }
         })
     </script>
-
-    
 </body>
 </html>
