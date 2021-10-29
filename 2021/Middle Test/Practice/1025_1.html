@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <img v-bind:src="dd">
+        <a v-bind:href="ff">네이버</a>
+
+        <p v-bind:align="gg">우측</p>
+        <p v-bind:style="{color: mc}">색지정</p>
+        <p v-bind:style="{fontSize: fs}">사이즈</p>
+        <p v-bind:style="{backgroundColor: bc}">배경색</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                dd: '',
+                ff: 'https://www.naver.com/',
+                gg: 'right',
+
+                mc: '#E08000',
+                fs: '200%',
+                bc: 'aqua'
+            }
+        })
+    </script>
+</body>
+</html>
