@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input v-model="name">
+        <p>{{ name }}</p>
+
+        <input v-model.lazy="name2">
+        <p>입력후 표시 {{ name2 }}</p>
+
+        
+
+        <input type="checkbox" v-model="mc">{{ mc }}
+
+        <p><input type="checkbox" v-model="agree">동의</p>
+        <button v-bind:disabled="agree==false">송신</button>
+
+        <select v-model="mc2">
+            <option disabled value="">색을 선택하시오.</option>
+            <option>red</option>
+            <option>blue</option>
+        </select>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+              name: '',
+              name2: '',
+              mc: false,
+              agree: false,
+              mc2: ''
+            }
+        })
+    </script>
+
+</body>
+</html>
