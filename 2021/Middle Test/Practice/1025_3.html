@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{ count }}</p>
+        <button v-on:click="countUp">++</button>
+        <button v-on:click="countUp(3)">3증가</button>
+
+        <p><button value="god" v-bind:disabled="isclick"
+        v-on:click="asd">ㄱ</button></p>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+        function god() {
+            alert("인증완료");
+        }
+        new Vue({
+            el:'#app',
+            data: {
+                count: 0,
+                isclick: false
+            },
+            methods: {
+                countUp: function() {
+                    this.count++,
+                    
+                    function(value) {
+                    this.count += value;
+                    }
+                },
+                asd: function() {
+                    this.isclick = true;
+                    god();
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>
