@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="item in ar">{{ item }}</li>
+        </ul>
+
+        <ul>
+            <li v-for="item in av" v-if="item % 2==0">{{ item }}</li>
+            <!-- 짝수만 출력 -->
+        </ul>
+
+        <li v-for="is in fs">
+            {{ is.name }} - {{ is.age }}
+        </li>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                ar: ['안','소','현'],
+                av: [1,2,3,4,5,6],
+                fs: [ 
+                    { name:'김리건', age:27 },
+                    { name:'안소현', age:28 }
+                ]
+            }
+        })
+    </script>
+</body>
+</html>
