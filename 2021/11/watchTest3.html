@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>값은 {{ animeNumber }} 입니다.</p>
+        <input v-model.number="myNumber" type="number">
+    </div>    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    
+    <!-- TweenMax 라이브러리 CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                myNumber: 0,
+                tweenedNumber: 0
+            },
+            watch: {
+                // myNumber 를 감시하여 값이 변할시 실행한다
+                myNumber: function() {
+                    // data의 tweenedNumber 프로퍼티를 1초이상이면 myNumber 까지 증가시킨다.
+                    TweenMax.to(this.$data, 1, {tweenedNumber: this.myNumber})
+                }
+            },
+            computed: {
+                // tweenedNumber 값이 변경되는 변화중 애니메이션을 산충
+                animeNumber: function() {
+                    return this.tweenedNumber.toFixed(0);
+                }
+            }
+        })
+    </script>
+</body>
+</html>
