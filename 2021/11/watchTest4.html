@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>제한 시간내에 문자 입력하기</h2>
+    <div id="app">
+        <p>금지문자로 나누어 복수입력가능</p>
+        <input v-model="1">
+
+        <p>제한시간을 입력하세요(초)</p>
+        <input v-model="2">
+
+        <p>남은시간 {{  }}</p>
+        <textarea disabled="iswritable" v-model="3"></textarea>
+
+        <p v-if="isResult">{{ wordCnt }}개의 문자를 입력하였습니다.</p>
+        <p v-if="isResult">별점 : {{ resultScore }} (금지문자 1개당 12점)</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    
+    <!-- TweenMax 라이브러리 CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                inputText: '',
+                forbid
+            }
+        })
+    </script>
+</body>
+</html>
