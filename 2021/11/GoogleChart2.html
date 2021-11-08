@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(numGraph1);
+          google.charts.setOnLoadCallback(numGraph2);
+
+          function numGraph1() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '정당');
+            data.addColumn('number', '의석수');
+            data.addRows([
+              ['미래한국당', 19],
+              ['더불어시민당', 17],
+              ['정의당', 5],
+              ['국민의당', 3],
+              ['열린민주당', 3]
+            ]);
+            var options = {title:' 21대 국회의원 선거 정당별 비례대표 의석수',
+                           width:350,
+                           height:300};
+            var chart = new google.visualization.PieChart(document.getElementById('numGraph1_div'));
+            chart.draw(data, options);
+          }
+
+          function numGraph2() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '정당');
+            data.addColumn('number', '의석수');
+            data.addRows([
+              ['민주당-시민당', 180],
+              ['통합당-미래한국', 103],
+              ['정의당', 26],
+              ['국민의당', 5],
+              ['열린민주당', 3],
+              ['무소속', 3]
+            ]);
+            var options = {title:'21대 국회의원 선거 정당별 총 의석수',
+                           width:350,
+                           height:300};
+            var chart = new google.visualization.PieChart(document.getElementById('numGraph2_div'));
+            chart.draw(data, options);
+          }
+        </script>
+  </head>
+  <body>
+    <div class="columns">
+        <div id="numGraph1_div" style="border: 1px solid #ccc"></div>
+        <div id="numGraph2_div" style="border: 1px solid #ccc"></div>
+    </div>
+  </body>
+</html>
