@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>클릭하면 셔플하는 예제</h2>
+    <button onclick="shuffleData()">셔플</button>
+
+    <script>
+        var dataArray = ['one','two','three','four','five'];
+            function shuffleData() {
+                // 임시로 저장할 배열공간 준비
+                var buffer = [];
+                // 원본 배열의 개수
+                var len = this.dataArray.length;
+                // 원래 배열을 감소해가면서 반복, i는 그 시점에서의 개수
+                for (var i=len; len>0; len--) {
+                    // r 은 랜덤수를 뽑아 개수를 곱한후 소수점 제거한 값
+                    var r = Math.floor(Math.random() * len);
+                    buffer.push(this.dataArray[r]);
+                    this.dataArray.splice(r,1);
+                }
+                this.dataArray = buffer;
+
+                alert(dataArray)
+
+            }
+    </script>
+</body>
+</html>
