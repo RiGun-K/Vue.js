@@ -5,26 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 </head>
 <body>
     <h2>JSON을 읽어 들이는 예제</h2>
-    <input type="file" id="loader">
+    <div id="app">
+        <input type="file" v-on:change="onFileChange">
+        <p>읽어 들인 데이터 = {{ loadData }}</p>
+    </div>
     <script>
-        var obj1 = document.getElementById("loader");
-        obj1.addEventListener("change", loadFile, false);
-        function loadFile(e) {
-            file = e.target.files[0]
-            if (file) {
-                var reader = new FileReader();
-                reader.onload = function(e) {
-                    console.log(">>>"+ e.target.result);
-                    json = JSON.parse(e.target.result);
-                    console.log(">>>"+ json[0].title);
-                    console.log(">>>" + json[0].body);
+        new Vue({
+            el: '#app',
+            data: {
+                loadData:'',
+            },
+            methods: {
+                onFileChange: function(e) {
+                    file = e.target.files[0]
+                    if (file) {
+                        var reader = new FileReader()
+                        var vm = this;
+                        reader.onload = function(e) {
+                            json = JSON.parse(e.target.result);
+                            vm.loadData = json;
+                        }
+                        reader.readAsText(file)
+                    }
                 }
-                reader.readAsText(file);
             }
-        }
+        });
+        
     </script>
 </body>
 </html>
