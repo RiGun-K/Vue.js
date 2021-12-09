@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>감상은 100자 이내로 작성할 것 !!</p>
+        <textarea v-model="myText"></textarea>
+        <p v-bind:style="{color: computedColor}">
+            남은 글자는 {{ remaining }} 입니다.
+        </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                myText:'빈칸 입니다.'
+            },
+            computed: {
+                remaining: function() {
+                    return 100 - this.myText.length;
+                },
+                computedColor: function() {
+                    col = "green";
+                    if (this.remaining < 20) {
+                        col = "orange";
+                    } 
+                    if (this.remaining < 1) {
+                        col = "red";
+                    }
+                    return col;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

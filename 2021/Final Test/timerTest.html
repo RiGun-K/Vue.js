@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>남은 시간이 0초가 되면 얼럿</h2>
+    
+    <div id="app">
+        <p>앞으로 {{ restSec }} 초</p>
+        <button v-on:click="startTimer">START</button>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                restSec: 5,
+                timerObj:null,
+            },
+            methods: {
+                startTimer:function() {
+                    this.restSec = 5;
+                    this.timerObj = setInterval(()=> { this.restSec-- }, 1000)
+                }
+            },
+            watch: { 
+                restSec: function() {
+                    if (this.restSec <= 0) {
+                        alert("제한 시간입니다.")
+                        clearInterval(this.timerObj);
+                    }
+                }
+            }
+        })
+        
+
+    </script>
+
+</body>
+</html>

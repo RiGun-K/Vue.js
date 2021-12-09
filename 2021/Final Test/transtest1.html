@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app">
+        <label><input type="checkbox" v-model="isOK">변경</label>
+        <transition>
+            <p v-if="isOK">표시/비표시 애니메이션</p>
+        </transition>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                isOK: false
+            }
+        })
+    </script>
+
+    <style>
+        .v-enter-active, .v-leave-active {
+            transition: 0.5s;
+        }
+
+        .v-enter, .v-leave-to {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+    </style>
+</body>
+</html>
