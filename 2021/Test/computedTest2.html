@@ -15,6 +15,10 @@
         </p>
     </div>
 
+    <textare v-model="test"></textare>
+    <p v-bind:style="{color: computedColor}">
+        남은 글자는 {{ remain }}
+    </p>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
