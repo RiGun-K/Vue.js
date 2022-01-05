@@ -6,25 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camping</title>
     <script src="./Practice.js"></script>
-
+    <link rel="stylesheet" href="./camping.css" media="(min-width:600px)">
 </head>
 <body>
     <div id="app">
      
         <header>
             <div id="logo">
-                <img src="./camping.jpg" width="80" height="70" alt="MainLogo">
+                <img src="./camping.jpg" width="130" height="100" alt="MainLogo">
             </div>
 
+            <div id="searchArea">
+                <form>
+                <input type="search" placeholder="검색어를 입력하세요">
+                </form>
+            </div>
             <div id="top_menu">
                 <a href="#">로그인</a>
                 <a href="#">회원가입</a>
             </div>
 
             <nav>
-                <ul>
-                    <li><a href="#">캠핑플랜</a></li>
-                    <li><a href="#">인포터</a></li>
+                <ul>  
+                    <li><a href="http://www.naver.com">캠핑플랜</a></li>                <!-- 현재 창에서 넘어감 -->
+                    <li><a href="http://www.naver.com" target="_blank">인포터</a></li>  <!-- 새 창으로 띄워서 넘어감 -->
                     <li><a href="#">Item Buy</a></li>
                     <li><a href="#">Item Share</a></li>
                     <li><a href="#">캠프파이어</a></li>
@@ -33,6 +38,21 @@
             </nav>
 
         </header>
+
+
+        <article id="content">
+            <section id="main">
+                <img src="./cam.png" alt="main img">
+            </section>
+            <section>
+                <ul id="banner">
+                    <li><a href="#"><img src="./imgs_company/banner1.png" alt="banner1"></a></li>
+                    <li><a href="#"><img src="./imgs_company/banner2.png" alt="banner2"></a></li>
+                </ul>
+ 
+            </section>
+ 
+        </article>
     </div>
 
     
