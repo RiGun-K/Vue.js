@@ -40,7 +40,7 @@ body {
   background-color: #ffffff;
   font-family: "Lato", sans-serif;
   color: #333333;
-  font-size: 16px;
+  font-size: 18px;
   overflow-x: hidden;
 }
 
@@ -362,18 +362,18 @@ img {
   font-size: 14px;
   padding: 5px 8px;
 }
-#aa-header .aa-header-bottom {
+.aa-header-bottom {
   float: left;
   display: inline;
   width: 100%;
   padding: 20px 0;
 }
-#aa-header .aa-header-bottom .aa-header-bottom-area {
+.aa-header-bottom .aa-header-bottom-area {
   float: left;
   display: inline;
   width: 100%;
 }
-#aa-header .aa-header-bottom .aa-header-bottom-area .aa-logo {
+#aa-header-bottom .aa-header-bottom-area .aa-logo {
   float: left;
   margin-top: 4px;
 }
