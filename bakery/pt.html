@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header-full {
+            width: 100%;
+    position: fixed;
+    z-index: 13;
+    background: rgba(0,0,0,.4);
+    height: 120px;
+    -webkit-transition: background-color 700ms linear;
+    -moz-transition: background-color 700ms linear;
+    -o-transition: background-color 700ms linear;
+    -ms-transition: background-color 700ms linear;
+    transition: background-color 700ms linear;
+        }
+        div {
+            display: block;
+        }
+        #header-full .gnb{
+            height: 40px;
+            position: absolute;
+            z-index: 0;
+            right: 20px;
+            top: 10px;
+            width: 100%;
+            z-index: 12;
+        }
+        ul {
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
+        li {
+            text-align: -webkit-match-parent;
+        }
+        body {
+            font-size: 12px;
+    font-family: 'roboto','Noto Sans KR','malgun gothic',dotum,gothic;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    word-break: break-all;
+    height: 100%;
+    overflow: hidden;
+    letter-spacing: -0.01em;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header-full" class="">
+        <div class="gnb">
+            <ul>
+                    <li class="b"><a href="/">HOME</a></li>
+                <li><a href="./?c=cs/notice&amp;m=bbs&amp;bid=notice">공지사항</a></li>
+                        <li><a href="javascript:void(0)" onclick="isLogin('join')">회원가입</a></li>
+                <li><a href="javascript:void(0)" onclick="isLogin()">로그인</a></li>
+                        <li><a href="./?c=cs/notice">고객센터</a></li>
+            </ul>
+        </div>
+    
+        <div class="header-wrap">
+            <div class="logo">
+                <h1><a href="./"><img src="" alt="오지캠핑"></a></h1>
+            </div>
+    
+            <a href="https://play.google.com/store/apps/details?id=com.www5gcamp.a5gcamp" target="_blank"><img src="/layouts/5g/image/googleplay.png" alt="오지캠핑 어플 구글플레이 다운로드 링크" class="googleplay"></a>
+    
+            <div class="topmenu">
+                <ul>
+                                                    <li id="topmenu0">
+                    <a href="./?c=camping">전체</a>
+                </li>
+                            <li id="topmenu1">
+                    <a href="./?c=5g">오지/노지캠핑</a>
+                </li>
+                            <li id="topmenu2">
+                    <a href="./?c=camp">유료캠핑장</a>
+                </li>
+                            <li id="topmenu3">
+                    <a href="./?c=glamping">글램핑/카라반</a>
+                </li>
+                
+                <li>
+                    <a href="javascript:;" data-fancybox="" data-type="ajax" data-src="./?m=camping&amp;_ajax=themesearch&amp;fun=&amp;nature=&amp;themecat=&amp;facilities=" onclick="$.fancybox.close( all )">테마검색</a>
+                </li>
+            
+    
+                <li>
+                    <img src="/layouts/5g/image/top_new.svg" width="30px" class="top_ico">
+                    <a href="./?c=market">오캠장터</a>
+                    <ul style="display: none;">
+                        <li><a href="./?c=market/sale">팝니다</a></li>
+                        <li><a href="./?c=market/buy">삽니다</a></li>
+                    </ul>
+                </li>
+    
+                <li>
+                    <a href="">캠핑정보</a>
+                    <ul style="display: none;">
+                        <li><a href="./?c=info/camptip">캠핑 팁</a></li>
+                        <li><a href="./?c=info/campfood">캠핑 음식</a></li>
+                        <li><a href="./?c=info/tent">텐트 설치방법</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">캠핑톡</a>
+                    <ul style="display: none;">
+                        <li><a href="./?c=talk/greeting">가입인사</a></li>
+                        <li><a href="./?c=talk/review">캠핑 리뷰</a></li>
+                        <li><a href="./?c=talk/freeboard">자유게시판</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

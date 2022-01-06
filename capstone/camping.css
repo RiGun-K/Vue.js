@@ -12,6 +12,11 @@ header{
     /* header의 position이 relative 여야만 함 */
     position: relative;
 }
+
+#content{
+    margin:10px;
+    width: 0%;
+}
  
 /* 제목영역안에 있는 메인 로고 이미지 위치 지정 */
 #logo{
@@ -35,6 +40,11 @@ header{
     top: 20px;
     right: 20px;
     color: white;
+}
+
+#main{
+    margin: 0 auto;
+    width: 100px;
 }
  
 /* top_menu a의 글시 하얀색으로 */
