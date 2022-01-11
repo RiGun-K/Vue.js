@@ -1,0 +1,22 @@
+{
+  "name": "vue",
+  "version": "1.0.0",
+  "description": "![image](https://user-images.githubusercontent.com/80092311/147581066-2cb86ac2-acdc-4c91-9be1-4d24b6c58cdf.png)",
+  "main": "jquery-3.6.0.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RiGun-K/Vue.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RiGun-K/Vue.js/issues"
+  },
+  "homepage": "https://github.com/RiGun-K/Vue.js#readme",
+  "dependencies": {
+    "@types/jquery": "^3.5.12"
+  }
+}
