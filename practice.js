@@ -30,6 +30,7 @@ if ( checkAge(age) ) {
 function ask(question, yes, no) {
     if (confirm(question)) yes() 
     else no();
+
 }
 
 ask(
@@ -39,4 +40,9 @@ ask(
         self.opener = self;
         window.close(); }
 );
+
+// onclick 
+<input value="클릭해봐" onclick="alert('진짜했네...')" type="button"></input>
+
+
 
