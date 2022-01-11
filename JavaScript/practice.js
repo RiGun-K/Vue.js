@@ -42,7 +42,6 @@ ask(
 );
 
 // onclick 
-<input value="클릭해봐" onclick="alert('진짜했네...')" type="button"></input>
 
 
 
