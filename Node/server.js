@@ -3,7 +3,7 @@ const server = http.createServer((request, response)=>{
     response.writeHead(200, {'Content-Type':'text/html'});
 
     if(request.url=='/hello'){
-        response.end('Hello 폴더로 오면 출력');
+        response.end('Hello 경로로 오면 출력');
     } else {
         response.end('그외 Home 출력');
     }
@@ -23,6 +23,6 @@ server.listen(3000);
   */
 
 /*
-  200 = 통신이 성공했다는 신호
+  200 = 통신이 성공했다는 신호 ( 꼭 안 적어도 됨 )
   response.end = 이것을 호출함으로써 요청은 끝났다는 뜻
 */
