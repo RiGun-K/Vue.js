@@ -17,7 +17,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/api/books', booksRouter);
+app.use('/users', usersRouter);     // GET방식 API
+app.use('/api/books', booksRouter); // GET방식 API
 
 module.exports = app;
