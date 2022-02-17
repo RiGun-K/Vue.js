@@ -15,6 +15,9 @@ const routes = [
     path: '/books/:bookId',
     name: 'Book',
     component: Book
+  },
+  {
+    
   }
 ]
 
