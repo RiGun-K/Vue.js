@@ -17,8 +17,11 @@ const routes = [
     component: Book
   },
   {
-    
-  }
+    path: '',
+    name: '',
+    component
+  },
+
 ]
 
 const router = new VueRouter({
