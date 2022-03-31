@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <h1>Welcome  {{ $store.state.user.userId }}</h1>
+        <h1>Welcome  {{ userId }}</h1>
         <v-text-field v-model="newId" type="text" placeholder="수정할 내용을 입력하세요."></v-text-field>
         <v-btn rounded color="primary" dark @click="saveUserId">수정하기</v-btn>
         <br>
@@ -31,12 +31,12 @@
         <br>
 
         <br>
-        <h1>API로 받아온 데이터 배열의 수 는 {{ $store.getters['reviews/reviewCount'] }} 개 입니다.</h1>
+        <h1>API로 받아온 데이터 배열의 수 는 {{ reviewCount }} 개 입니다.</h1>
         <br>
         <v-btn rounded color="primary" dark @click="updateReviews">데이터 불러오기</v-btn>
         <br>
         <ul>
-            <li v-for="r in $store.state.reviews.reviews" :key="r.id">
+            <li v-for="r in reviews" :key="r.id">
                 <p>{{ r.body }}</p>
             </li>
         </ul>
