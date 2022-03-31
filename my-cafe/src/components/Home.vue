@@ -1,10 +1,10 @@
 <template>
     <div id="app">
-        <h1>Welcome  {{ userId }}</h1>
-        <input v-model="newId" type="text">
-        <button @click="saveUserId">Save</button>
+        <h1>Welcome  {{ $store.state.user.userId }}</h1>
+        <v-text-field v-model="newId" type="text" placeholder="수정할 내용을 입력하세요."></v-text-field>
+        <v-btn rounded color="primary" dark @click="saveUserId">수정하기</v-btn>
         <br>
-            <v-text-field>
+            <!-- <v-text-field>
                 <v-icon
                     slot="append"
                     color="red"
@@ -19,7 +19,6 @@
                 </v-icon>
             </v-text-field>
 
-        <!-- <button @click="updateReviews">Update</button> -->
         <div class="text-center">
             <v-btn
                 rounded
@@ -28,14 +27,19 @@
             >
                 Button
             </v-btn>
-        </div>
+        </div> -->
+        <br>
 
-        <h1>{{ reviewCount }}</h1>
-        <!-- <ul>
-            <li v-for="r in reviews" :key="r.id">
+        <br>
+        <h1>API로 받아온 데이터 배열의 수 는 {{ $store.getters['reviews/reviewCount'] }} 개 입니다.</h1>
+        <br>
+        <v-btn rounded color="primary" dark @click="updateReviews">데이터 불러오기</v-btn>
+        <br>
+        <ul>
+            <li v-for="r in $store.state.reviews.reviews" :key="r.id">
                 <p>{{ r.body }}</p>
             </li>
-        </ul> -->
+        </ul>
 
         <!-- div id="app" 이후로 v를 사용하기 위해 사이트에서 링크를 복사해서 붙여 넣기만 한다 --> 
 
