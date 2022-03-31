@@ -94,9 +94,11 @@ export default{
         ...mapMutations(['updateUserId']),
         ...mapActions('reviews', ['getReviews']),
         saveUserId(){
+            // this.$store.commit('updateUserId', this.newId)
             this.updateUserId(this.newId)
         },
         updateReviews(){
+            // this.$store.dispatch('reviews/requestReviews')
             this.getReviews()
         }
     }
