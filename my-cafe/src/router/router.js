@@ -20,3 +20,4 @@ export default new VueRouter({
         {path:'/reviews',component:Reviews}
     ]
 });
+

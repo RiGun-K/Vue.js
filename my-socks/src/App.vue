@@ -2,6 +2,7 @@
   <div id="app">
     <product-page></product-page>
   </div>
+  
 </template>
 
 <script>

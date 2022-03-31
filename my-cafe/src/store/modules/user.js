@@ -1,6 +1,6 @@
 export default{
     state:()=>({
-        userId:'user'
+        userId:'RiGun'
     }),
     mutations:{
         updateUserId(state, newId) {

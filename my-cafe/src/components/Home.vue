@@ -1,7 +1,9 @@
 <template>
     <div id="app">
         <h1>Welcome  {{ userId }}</h1>
-        <!-- <input v-model="newId" type="text"><button @click="saveUserId">Save</button><br> -->
+        <input v-model="newId" type="text">
+        <button @click="saveUserId">Save</button>
+        <br>
             <v-text-field>
                 <v-icon
                     slot="append"

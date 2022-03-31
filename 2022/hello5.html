@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+        <h3>{{ totalCount }}</h3>
+        <counter></counter>
+        <counter></counter>
+        <counter></counter>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        var app = Vue.createApp({
+            data(){
+                return { totalCount:0 }
+            }
+        })
+        app.component('counter', {
+            template:`<button @click="add">{{ count }}</button>`,
+            data(){
+                return {count:0}
+            },
+            methods:{
+                add(){ this.count += 1}
+            }
+        })
+        app.mount('#content')
+    </script>
+</body>
+</html>
