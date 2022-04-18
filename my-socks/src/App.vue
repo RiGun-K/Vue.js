@@ -1,21 +1,23 @@
 <template>
-  <div id="app">
-    <product-page></product-page>
-  </div>
-  
+  <v-app>
+    <v-main>
+      <HelloWorld/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import ProductPage from './components/ProductPage.vue'
+import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
+
   components: {
-    ProductPage
-  }
+    HelloWorld,
+  },
+
+  data: () => ({
+    //
+  }),
 }
 </script>
-
-<style>
-@import './assets/css/styles.css';
-</style>
