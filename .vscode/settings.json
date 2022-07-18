@@ -2,5 +2,9 @@
     "C_Cpp.commentContinuationPatterns": [
     
         "/**"
-    ]
+    ],
+    "files.associations": {
+        "네 수의 평균.C": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }
