@@ -4,7 +4,8 @@
         "/**"
     ],
     "files.associations": {
-        "네 수의 평균.C": "cpp"
+        "네 수의 평균.C": "cpp",
+        "stdio.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
